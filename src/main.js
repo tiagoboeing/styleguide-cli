@@ -44,22 +44,13 @@ export async function configureProject (options) {
     targetDirectory: options.targetDirectory || process.cwd()
   }
 
-  console.log('dirname', __dirname)
-
   const currentFileUrl = __dirname
-
-  // console.log('meta url', import.meta.url)
-  console.log('currentFileUrl', currentFileUrl)
-  // console.log('cwd', process.cwd())
-  // console.log('path resolve', path.resolve(currentFileUrl, '../../'))
 
   const templateDir = path.resolve(
     currentFileUrl,
     '../templates',
     options.project.toLowerCase()
   )
-
-  console.log('templateDir', templateDir)
 
   options.templateDirectory = templateDir
 
